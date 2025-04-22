@@ -16,10 +16,20 @@ class UserSeeder extends Seeder
     {
         User::where('email', 'adminhmg@gmail.com')->delete();
 
+        // ADMIN
         User::create([
             'name' => 'Admin',
             'email' => 'adminhmg@gmail.com',
             'password' => Hash::make('adminhmg123'),
+            'role' => 'admin',
+        ]);
+
+        // Karyawan
+        User::create([
+            'name' => 'John Doe',
+            'email' => 'johndoe@example.com',
+            'password' => Hash::make('karyawan123'),
+            'role' => 'employee',
         ]);
     }
 }

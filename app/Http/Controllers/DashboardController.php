@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Karyawan;
+use App\Models\Employees;
 
 class DashboardController extends Controller
 {
@@ -12,8 +12,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        $employees = Karyawan::all();
-        return view('dashboard.index', ['employees' => $employees]);
+        $title = 'Dashboard';
+        $employees = Employees::all();
+        return view('dashboard.index', ['employees' => $employees], compact('title'));
     }
 
     /**
@@ -37,7 +38,9 @@ class DashboardController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $employee = Employees::findOrFail($id);
+
+        return view('dashboard.show', compact('employee'));
     }
 
     /**

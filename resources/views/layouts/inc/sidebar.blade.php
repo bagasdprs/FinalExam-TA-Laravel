@@ -14,8 +14,8 @@
             </a>
             <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
-                    <a href="/categories">
-                        <i class="bi bi-circle"></i><span>Category</span>
+                    <a href="/employees">
+                        <i class="bi bi-circle"></i><span>Employee</span>
                     </a>
                 </li>
                 <li>
