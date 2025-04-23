@@ -19,7 +19,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="/user">
+                    <a href="/users">
                         <i class="bi bi-circle"></i><span>User</span>
                     </a>
                 </li>
@@ -39,12 +39,12 @@
             <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
                 <li>
                     <a href="#">
-                        <i class="bi bi-circle"></i><span>POS</span>
+                        <i class="bi bi-circle"></i><span>Scores</span>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
-                        <i class="bi bi-circle"></i><span>POS Sale</span>
+                    <a href="/questionscores">
+                        <i class="bi bi-circle"></i><span>Assessment</span>
                     </a>
                 </li>
 

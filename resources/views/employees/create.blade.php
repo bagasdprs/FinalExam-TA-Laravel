@@ -46,7 +46,7 @@
                                 <label for="photo" class="form-label">Foto</label>
                                 <input type="file" class="form-control" id="photo" name="photo" accept="image/*">
                             </div>
-                            <button type="submit" class="btn btn-primary">Simpan</button>
+                            <button type="submit" class="btn btn-primary" onclick="this.disabled=true; this.form.submit();>Simpan</button>
                             <a href="{{ route('employees.index') }}" class="btn btn-secondary">Kembali</a>
                         </form>
                     </div>

@@ -40,10 +40,13 @@ class EmployeesController extends Controller
             'photo' => 'nullable|image|mimes:jpeg,png,jpg|max:2048',
         ]);
 
+        $data = $request->only(['name', 'nip', 'email', 'division', 'period']);
+
         // Upload foto jika ada
         $photoPath = null;
         if ($request->hasFile('photo')) {
             $photoPath = $request->file('photo')->store('photos', 'public');
+            $data['photo'] = $photoPath;
         }
 
         // Simpan data ke database
@@ -57,7 +60,8 @@ class EmployeesController extends Controller
         ]);
 
         // Redirect ke halaman daftar karyawan
-        Employees::create($request->all());
+        // Employees::create($request->all());
+        Employees::create($data);
         return redirect()->route('employees.index')->with('success', 'Karyawan berhasil ditambahkan.');
     }
 

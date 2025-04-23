@@ -11,8 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('penilaians', function (Blueprint $table) {
+        Schema::create('question_scores', function (Blueprint $table) {
             $table->id();
+            $table->string('question');
+            $table->string('category')->nullable();
+            $table->decimal('score', 4, 2)->default(1.0);
             $table->timestamps();
         });
     }
@@ -22,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('penilaians');
+        Schema::dropIfExists('question_scores');
     }
 };
